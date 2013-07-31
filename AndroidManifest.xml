@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.codingzen.Shuuush"
+    android:versionCode="3"
+    android:versionName="1.1" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk android:minSdkVersion="10" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+<application android:label="@string/app_name" android:icon="@drawable/ic_app_icon" android:name="ShuuushApplication">
+        
+        <activity android:name=".Activities.MainViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity><activity android:name=".Activities.MainPreferenceActivity">
+        </activity>
+        
+        <activity android:name=".Activities.WidgetOnClickActivity" android:theme="@android:style/Theme.NoDisplay" android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="com.codingzen.action.WIDGET_ONCLICK"/>
+            </intent-filter>
+        </activity><activity android:name=".Activities.WhitelistActivity"></activity>
+        <service android:name=".Services.StartShuuushService">
+            <intent-filter>
+                <action android:name="com.codingzen.action.START_SHUUUSH"/>
+            </intent-filter>
+        </service>
+        <service android:name=".Services.StopShuuushService">
+            <intent-filter>
+                <action android:name="com.codingzen.action.STOP_SHUUUSH"/>
+            </intent-filter>
+        </service>
+        <service android:name=".Services.SendSmsReplyService"></service><service android:name=".Services.StartCalendarIntegrationService">
+            <intent-filter>
+                <action android:name="com.codingzen.action.START_CALENDAR_INTEGRATION" />
+            </intent-filter>
+        </service><service android:name=".Services.StopCalendarIntegration">
+            <intent-filter>
+                <action android:name="com.codingzen.action.STOP_CALENDAR_INTEGRATION" />
+            </intent-filter>
+        </service><receiver android:name="DNDWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/dnd_widget_provider_info" />
+        </receiver><receiver android:name=".Recievers.BootCompleteReciever">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver><receiver android:name=".Recievers.SmsMessageReceivedReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name=".Recievers.RingerModeChangedReceiver">
+            <intent-filter>
+                <action android:name="android.media.RINGER_MODE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Recievers.PhoneCallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        
+        
+        
+        <receiver android:name=".Recievers.AlarmFiredReceiver">
+            <intent-filter>
+                <action android:name="com.codingzen.action.CALENDAR_INTEGRATION"/>
+            </intent-filter>
+        </receiver>
+        
+    </application>
+
+</manifest>

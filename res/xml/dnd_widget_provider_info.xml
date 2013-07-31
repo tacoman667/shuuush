@@ -1,0 +1,2 @@
+
+    <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:initialLayout="@layout/dnd_widget" android:minWidth="72px" android:minHeight="72px" android:updatePeriodMillis="0"/>

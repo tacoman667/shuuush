@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="isDebugMode">true</string><string name="app_name">Shuuush!</string>
+    <string name="DNDServiceNotificationContentText">@string/app_name</string>
+    <string name="DNDNotificationTickerTextActivated">Shuuush!</string>
+    <string name="DNDNotificationTickerTextDeactivated">Shuuush! Deactivated</string>
+    <string name="DNDNotificationTickerTextBoot">Shuuush! Ready</string>
+    <string name="DefaultSmsReply">I am busy right now and cannot be interrupted. I will get back to you as soon as I can. Thanks!</string>
+    <string name="event_listview_header_text">Missed Events</string>
+    <string name="ActivateDeactivateButton">Activate/Deactivate</string>
+    <string name="SettingsButton">Settings</string>
+    <string name="UserActivatedNotificationText">User Activated</string>
+    <string name="CalendarActivatedNotificationText">Calendar Activated</string>
+    
+    <string name="missed_events_empty_message">There are no missed events since the last activation</string>
+    <string name="whitelist_empty_message">You have not selected any contacts to whitelist yet.</string>
+
+</resources>

@@ -1,0 +1,9 @@
+This application is a "do not disturb" type utility that will allow you to auto respond to text messages when it is active. It logs each event and lists them in the main view for you to click on and either text or call back. If the sender/caller is in your contacts, you will see a badge next to them that will allow you to contact them using other means set up in your contacts like email, call, text, etc. If they are not in your contacts, you will see a default image and clicking it will ask if you wish to put them into your contacts.
+
+You also have the option to allow Shuuush! to activate/de-activate based on the busy events in your calendar. Only those marked busy and not all-day events will work in this mode.
+
+Once Shuuush! is deactivated, if there are any events that require your attention, it will notify you.
+
+Be sure to use the included widget to active and deactivate on the fly!
+
+I look forward you feedback on how to make this application better.

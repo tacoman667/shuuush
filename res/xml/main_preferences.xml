@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:selectable="true"><Preference android:title="Whitelist" android:key="whitelist" android:summary="A whitelist of contacts you allow to bypass the silent mode of Shuuush!"/><PreferenceCategory android:title="Calendar Integration" android:key="CalendarIntegrationCategory">
+    <CheckBoxPreference android:title="Calendar Events" android:summary="Shuuush! will automatically enable when a calendar event starts and disable when it stops" android:key="ShouldEnableFromCalendarEvents" />
+</PreferenceCategory><PreferenceCategory android:key="SmsAutoResponseSettingsGroup" android:title="Sms Auto Response Settings">
+    <CheckBoxPreference android:key="SmsAutoresponder" android:title="SMS Auto Response" android:shouldDisableView="true" android:persistent="true" android:summary="Send SMS Autoresponse"/><CheckBoxPreference android:key="OnlyAutorespondToContacts" android:dependency="SmsAutoresponder" android:defaultValue="True" android:summary="Only Autoreply To Contacts" android:title="Contacts Only"/><CheckBoxPreference android:key="ShouldUseDefaultMessage" android:title="Default Autoreply" android:dependency="SmsAutoresponder" android:defaultValue="True" android:disableDependentsState="true" android:shouldDisableView="true" android:persistent="true" android:summary="Use The Default Autoreply"/><EditTextPreference android:key="SmsAutoresponderText" android:title="Sms Autoresponder Text" android:dialogTitle="Autoresponse Text" android:dialogMessage="Enter text for the SMS Autoresponder" android:dependency="ShouldUseDefaultMessage" android:defaultValue="@string/DefaultSmsReply" android:persistent="true" android:summary="Set The Autoreply Text"/>
+    
+    
+</PreferenceCategory>
+
+
+    
+    
+    
+    
+    
+
+</PreferenceScreen>
